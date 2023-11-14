@@ -1,0 +1,11 @@
+<div *ngIf="coffee" class="coffee-details-container">
+    <div class="coffee-details-container-background">
+        <h2 class="coffee-details-heading">Coffee Details</h2>
+        <br>
+        <h3 class="coffee-name">{{ coffee.name }}</h3>
+        <p><strong>Tagline:</strong> {{ coffee.tagline }}</p>
+        <p><strong>Strength Level:</strong> {{ coffee.strength_level }}</p>
+        <p><strong>Description:</strong> {{ coffee.description }}</p>
+        <p><strong>Contributed by:</strong> {{ coffee.contributed_by }}</p>
+    </div>
+</div>

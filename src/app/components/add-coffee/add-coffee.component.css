@@ -5,7 +5,7 @@ article {
     align-items: center;
     color: #4c3a31;
 }
-
+    
 header {
     display: flex;
     gap: 20px;
@@ -20,16 +20,22 @@ button {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
-}
+    }
 
 button:hover {
     background-color: #aa826f; 
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 .headline {
     display: inline;
     color: #4c3a31; 
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -39,7 +45,6 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 800px;
     background-color: #f2e9e5;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -48,40 +53,30 @@ section {
     overflow: hidden;
 }
 
-.card-contint {
-    max-width: 50%;
-    min-width: 50%;
-}
 
-.card-img { 
-    max-width: 50%;
-}
-
-.coffee-img { 
-    max-width: 300px;
-    border-radius: 10px;
+label {
     display: block;
+    margin-bottom: 15px;
 }
 
-.error-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 100%;
-    padding: 20px;
-    font-weight: bold;
+input, textarea {
+    width: 700px;
+    border: none; 
+    outline: none; 
+    padding: 10px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
-.error-section .card-img {
-    max-width: 20%;
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-.error-img {
-    max-width: 100px;
-}
-
-.error-section .card-contint {
-    max-width: 80%;
+textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }

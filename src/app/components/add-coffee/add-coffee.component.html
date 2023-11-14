@@ -1,0 +1,39 @@
+<header>
+    <button routerLink="/"><span class="material-symbols-outlined">arrow_back</span></button>
+    <p class="headline">Create a new coffee</p>
+</header>
+
+
+<article>
+
+    <section>
+
+        <form [formGroup]="coffeeForm" (ngSubmit)="onSubmit()">
+            <label>Name:</label>
+            <input type="text" formControlName="name"><br><br>
+          
+            <label>Tagline:</label>
+            <input type="text" formControlName="tagline"><br><br>
+          
+            <label>Description:</label>
+            <textarea formControlName="description"></textarea><br><br>
+          
+            <label>First Roasted:</label>
+            <input type="text" formControlName="first_roasted"><br><br>
+          
+            <label>Roaster Tips:</label>
+            <textarea formControlName="roaster_tips"></textarea><br><br>
+          
+            <label>Strength Level:</label>
+            <input type="number" formControlName="strength_level"><br><br>
+          
+            <label>Contributed By:</label>
+            <input type="text" formControlName="contributed_by"><br><br>
+          
+            <button type="submit" [disabled]="coffeeForm.invalid">Create Coffee</button>
+          </form>
+          
+    </section>
+    
+</article>
+

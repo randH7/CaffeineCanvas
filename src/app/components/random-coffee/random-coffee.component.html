@@ -1,1 +1,24 @@
-<p>random-coffee works!</p>
+<header>
+    <button routerLink="/"><span class="material-symbols-outlined">arrow_back</span></button>
+    <p *ngIf="coffee" class="headline">{{ coffee.name }}</p>
+</header>
+
+<article>
+
+    <section *ngIf="coffee">
+        <div class="card-img"> <img class="coffee-img" [src]='coffee.image_url' alt="{{ coffee.name }} coffee Image"> </div>
+        <div class="card-contint">
+            <p class="detail-info">{{ coffee.tagline }}</p> <br>
+            <p class="detail-info">First Roasted: {{ coffee.first_roasted }}</p> <br>
+            <p class="detail-info">Strength Level: {{ coffee.strength_level }}</p> <br>
+            <p class="detail-info">Description: {{ coffee.description }}</p> <br>
+            <p class="detail-info">Contributed By: {{ coffee.contributed_by }}</p>
+        </div>
+    </section>
+    
+    <section *ngIf="errorOccurred" class="error-section">
+        <div class="card-img"> <img class="error-img" src="../../../assets/error-3d.png" alt="error-icon"> </div>
+        <div class="card-contint">Sorry something happen wrong. <br> Please try again</div>
+    </section>
+
+</article>

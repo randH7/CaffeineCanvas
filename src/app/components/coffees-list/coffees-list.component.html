@@ -1,1 +1,22 @@
-<p>coffees-list works!</p>
+
+<header>
+    <button routerLink="/"><span class="material-symbols-outlined">arrow_back</span></button>
+    <p class="headline">Coffee List</p>
+</header>
+
+
+<ul class="coffee-list">
+    <li *ngFor="let coffee of coffees" (click)="onCoffeeSelected(coffee)" class="coffee-item">
+      <div class="coffee-item-content">
+        <img class="coffee-image" [src]="coffee.image_url" alt="Coffee Image">
+        <div class="coff-content">
+          <h2 class="coffee-name">{{ coffee.name }}</h2>
+          <p><strong>Tagline:</strong> {{ coffee.tagline }}</p>
+          <p><strong>Contributed by:</strong> {{ coffee.contributed_by }}</p>
+        </div>  
+      </div>
+      <div *ngIf="selectedCoffee === coffee" class="coffee-details-container">
+        <app-coffee-details [coffee]="coffee"></app-coffee-details>
+      </div>
+    </li>
+  </ul>
